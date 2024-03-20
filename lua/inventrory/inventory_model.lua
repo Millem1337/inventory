@@ -8,9 +8,9 @@ function Inventory:new( size, condition, storage )
         storage = storage or {},
     }
 
-    setmetatable( item_template, Item )
+    setmetatable( inventory_template, Item )
 
-    return item_template
+    return inventory_template
 end
 
 function Inventory:AddItem( item ) -- Item from item model
