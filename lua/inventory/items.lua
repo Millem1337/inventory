@@ -1,4 +1,4 @@
-inventorySystem.ITEMS = {
+inventorySystem.items = {
     nothing = { // Key=id
         name = "Nothing",
         description = "Nothing is nothing :)",
