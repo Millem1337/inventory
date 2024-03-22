@@ -12,4 +12,8 @@ function Item:new( id, data )
     return item_template
 end
 
+function Item:Use( ply )
+    inventorySystem.items[self.id].use.func( ply, self.data )
+end
+
 setmetatable(Item, {__call = Item.new})
