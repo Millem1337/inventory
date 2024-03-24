@@ -16,4 +16,8 @@ function Item:Use( ply )
     inventorySystem.items[self.id].use.func( ply, self.data )
 end
 
+function Item:GetID()
+    return self.id
+end
+
 setmetatable(Item, {__call = Item.new})

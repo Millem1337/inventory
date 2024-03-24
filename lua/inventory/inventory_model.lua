@@ -29,6 +29,14 @@ function Inventory:RemoveItem( item ) -- Item, ITEM NOT INDEX!
     end
 end
 
+function Inventory:RemoveIndex( index ) -- Index
+    table.remove( self.storage, index )
+end
+
+function Inventory:GetItem( index )
+    return self.storage[index]
+end
+
 function Inventory:ToTable()
     local res = { storage = self.storage, size = self.size }
     return res
