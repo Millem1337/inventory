@@ -7,11 +7,9 @@ end
 function P:DropItem( index )
     local item = self:GetInventory():GetItem( index )
     if item then
-        local id = item:GetID()
-
         local startPos = self:EyePos() + self:GetAimVector() * 35
         local endPos = self:GetEyeTrace().HitPos
-        local item_data = inventorySystem.items[id]
+        local item_data = inventorySystem.items[item.id]
 
         local ent = ents.Create("inv_item")
         ent:SetItem( item )
