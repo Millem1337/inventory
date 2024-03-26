@@ -11,7 +11,7 @@ function P:DropItem( index )
         local endPos = self:GetEyeTrace().HitPos
         local item_data = inventorySystem.items[item.id]
 
-        local ent = ents.Create("inv_item")
+        local ent = ents.Create("inventory_item")
         ent:SetItem( item )
 
         ent:SetPos ( startPos )
@@ -23,5 +23,8 @@ function P:DropItem( index )
             phys:EnableMotion( true )
             phys:ApplyForceCenter((endPos - startPos):GetNormalized() * 300)
         end
+
+        self:GetInventory():RemoveIndex( index )
+        self:UpdateInventory()
     end
 end
