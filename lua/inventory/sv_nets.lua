@@ -43,7 +43,8 @@ net.Receive( inventorySystem.nets.use, function( _, ply )
     local item = ply:GetInventory():GetItem(index)
 
     if(item) then
-        item:Use()
+        item:Use( ply )
         ply:GetInventory():RemoveIndex( index )
+        ply:UpdateInventory()
     end
 end)
