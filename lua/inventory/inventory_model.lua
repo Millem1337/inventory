@@ -1,7 +1,7 @@
 Inventory = {}
 Inventory.__index = Inventory
 
-// Condition isn't saving
+-- Condition isn't saving
 function Inventory:new( size, condition, storage )
     local inventory_template = {
         size = size or 20,

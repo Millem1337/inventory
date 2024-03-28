@@ -9,7 +9,7 @@ function P:LoadInventory()
             self.inventory = Inventory()
         else
             temp_inventory = util.JSONToTable(temp_inventory)
-            self.inventory = Inventory( tonumber(temp_inventory.size) ) // tonumber is for except any errors
+            self.inventory = Inventory( tonumber(temp_inventory.size) ) -- tonumber is for except any errors
 
             for k, v in pairs(temp_inventory.storage or {}) do
                 self:GetInventory():AddItem( Item( v.id, v.data or {} ) )
@@ -17,7 +17,7 @@ function P:LoadInventory()
         end
     end
 
-    self:UpdateInventory() // To send information about inventory to client
+    self:UpdateInventory() -- To send information about inventory to client
 end
 
 function P:SQLUpdateInventory()

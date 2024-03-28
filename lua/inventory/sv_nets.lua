@@ -1,6 +1,6 @@
 inventorySystem.nets = {
-    update = "inventorySystem.update", // SERVER->CLIENT ARGUMENTS: TABLE, ENTITY
-    request = "inventorySystem.request", // CLIENT->SERVER ARGUMENS: ENTITY
+    update = "inventorySystem.update", -- SERVER->CLIENT ARGUMENTS: TABLE, ENTITY
+    request = "inventorySystem.request", -- CLIENT->SERVER ARGUMENS: ENTITY
 }
 
 for k,v in pairs( inventorySystem.nets ) do
