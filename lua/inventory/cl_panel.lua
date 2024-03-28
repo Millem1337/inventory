@@ -1,5 +1,5 @@
 inventorySystem.callPanel = function()
-    inventoryFrame = vgui.Create("UFrame")
+    inventoryFrame = vgui.Create("DFrame")
     inventoryFrame:SetTitle("Inventory")
     inventoryFrame:SetSize( 600, 500 )
     inventoryFrame:MakePopup()
