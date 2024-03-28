@@ -1,8 +1,8 @@
 inventorySystem.nets = {
-    update = "inventorySystem.update", // SERVER->CLIENT ARGUMENTS: TABLE, ENTITY
-    request = "inventorySystem.request", // CLIENT->SERVER ARGUMENS: ENTITY
-    drop = "inventorySystem.drop", // CLIENT->SERVER ARGUMENTS: INT( INDEX OF ITEM )
-    use = "inventorySystem.use", // CLIENT->SERVER ARGUMENTS: INT( INDEX OF ITEM )
+    update = "inventorySystem.update", -- SERVER->CLIENT ARGUMENTS: TABLE, ENTITY
+    request = "inventorySystem.request", -- CLIENT->SERVER ARGUMENS: ENTITY
+    drop = "inventorySystem.drop", -- CLIENT->SERVER ARGUMENTS: INT( INDEX OF ITEM )
+    use = "inventorySystem.use", -- CLIENT->SERVER ARGUMENTS: INT( INDEX OF ITEM )
 }
 
 function RequestInventory( ent )
