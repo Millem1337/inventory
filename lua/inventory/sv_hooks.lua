@@ -12,4 +12,8 @@ hook.Add("Initialize", "inventory.initialize", function()
     if inventorySystem.settings.sqlite.enabled then
         sql.Query("CREATE TABLE IF NOT EXISTS " .. inventorySystem.settings.sqlite.name .. " ( steamid TEXT, inventory TEXT )")
     end
+    if inventorySystem.settings.json.enabled and not file.Exists(inventorySystem.settings.json.name, "DATA") then
+        print("creating directory")
+        file.CreateDir(inventorySystem.settings.json.name)
+    end
 end)
